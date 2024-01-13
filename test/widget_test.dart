@@ -1,30 +1,31 @@
-// This is a basic Flutter widget test.
-//
-// To perform an interaction with a widget in your test, use the WidgetTester
-// utility in the flutter_test package. For example, you can send tap and scroll
-// gestures. You can also use WidgetTester to find child widgets in the widget
-// tree, read text, and verify that the values of widget properties are correct.
+import 'anjing.dart';
+import 'ikan.dart';
 
-import 'package:flutter/material.dart';
-import 'package:flutter_test/flutter_test.dart';
+void main(){
+  Anjing hewan1 = Anjing(age: 4);
+  hewan1.setLari = 2;
+  hewan1.setRenang = 1;
+  print("Hewan : ${hewan1.name}");
+  print("Kategori : ${hewan1.kategori}");
+  print("age : ${hewan1.age} tahun");
+  print("kecepatan lari : ${hewan1.lari} m/s");
+  print("kecepatan renang : ${hewan1.renang} m/s");
 
-import 'package:latihan_flutter/main.dart';
+  var anjingMenua = hewan1.menua = 2;
+  print("${hewan1.name} menua selama $anjingMenua tahun");
+  print("umur kini : ${hewan1.age} tahun");
 
-void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+  print("--------------------------------");
+  
+  Ikan hewan2 = Ikan(age: 3);
+  hewan2.setRenang = 4;
+  print("Hewan : ${hewan2.name}");
+  print("Kategori : ${hewan2.kategori}");
+  print("age : ${hewan2.age} tahun");
+  print("kecepatan renang : ${hewan2.renang} m/s");
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+  var ikanMenua = hewan2.menua = 1;
+  print("${hewan2.name} menua selama $ikanMenua tahun");
+  print("umur kini : ${hewan2.age} tahun");
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
-
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
-  });
 }
