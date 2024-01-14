@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:latihan_flutter/widgets/image_box.dart';
 
@@ -6,7 +8,20 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  // const MyApp({super.key});
+
+List<Map<String, dynamic>> data = List.generate(
+  10,
+  (index) => {
+    "text" : "Cabang ke - ${index+1}",
+    "image" : "assets/image/wchicken.png",
+    "color" : Color.fromARGB(
+      255,
+      200 + Random().nextInt(256),
+      200 + Random().nextInt(256),
+      200 + Random().nextInt(256),)
+  } );
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -22,20 +37,13 @@ class MyApp extends StatelessWidget {
                   crossAxisCount: 2,
                   crossAxisSpacing: 10,
                   mainAxisSpacing: 10),
-            children: [
-              ImageBox(image: "assets/image/wchicken.png", background: Colors.amber, ),
-              ImageBox(image: "assets/image/wchicken.png", background: Colors.black, ),
-              ImageBox(image: "assets/image/wchicken.png", background: Colors.green, ),
-              ImageBox(image: "assets/image/wchicken.png", background: Colors.blue, ),
-              ImageBox(image: "assets/image/wchicken.png", background: Colors.red, ),
-              ImageBox(image: "assets/image/wchicken.png", background: Colors.brown, ),
-              ImageBox(image: "assets/image/wchicken.png", background: Colors.amber, ),
-              ImageBox(image: "assets/image/wchicken.png", background: Colors.black, ),
-              ImageBox(image: "assets/image/wchicken.png", background: Colors.green, ),
-              ImageBox(image: "assets/image/wchicken.png", background: Colors.blue, ),
-              ImageBox(image: "assets/image/wchicken.png", background: Colors.red, ),
-              ImageBox(image: "assets/image/wchicken.png", background: Colors.brown, ),
-            ],
+            children:
+            data.map((e) =>
+            ImageBox(
+              cabang: e["text"],
+              image: e["image"],
+              background: e["color"]
+              )).toList(),
           )),
     );
   }
