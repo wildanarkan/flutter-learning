@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:latihan_flutter/widgets/image_box.dart';
 
 void main() {
   runApp(MyApp());
@@ -22,120 +23,21 @@ class MyApp extends StatelessWidget {
                   crossAxisSpacing: 10,
                   mainAxisSpacing: 10),
             children: [
-              Container(
-                  width: 100,
-                  height: 100,
-                  color: Colors.amber,
-                  child: Center(
-                    child: Image.asset("assets/image/wchicken.png"),
-                  )
-                ),
-              Container(
-                  width: 100,
-                  height: 100,
-                  color: Colors.amber,
-                  child: Center(
-                    child: Image.asset("assets/image/wchicken.png"),
-                  )
-                ),
-              Container(
-                  width: 100,
-                  height: 100,
-                  color: Colors.amber,
-                  child: Center(
-                    child: Image.asset("assets/image/wchicken.png"),
-                  )
-                ),
-              Container(
-                  width: 100,
-                  height: 100,
-                  color: Colors.amber,
-                  child: Center(
-                    child: Image.asset("assets/image/wchicken.png"),
-                  )
-                ),
-              Container(
-                  width: 100,
-                  height: 100,
-                  color: Colors.amber,
-                  child: Center(
-                    child: Image.asset("assets/image/wchicken.png"),
-                  )
-                ),
-              Container(
-                  width: 100,
-                  height: 100,
-                  color: Colors.amber,
-                  child: Center(
-                    child: Image.asset("assets/image/wchicken.png"),
-                  )
-                ),
-              Container(
-                  width: 100,
-                  height: 100,
-                  color: Colors.amber,
-                  child: Center(
-                    child: Image.asset("assets/image/wchicken.png"),
-                  )
-                ),
-              Container(
-                  width: 100,
-                  height: 100,
-                  color: Colors.amber,
-                  child: Center(
-                    child: Image.asset("assets/image/wchicken.png"),
-                  )
-                ),
-              Container(
-                  width: 100,
-                  height: 100,
-                  color: Colors.amber,
-                  child: Center(
-                    child: Image.asset("assets/image/wchicken.png"),
-                  )
-                ),
-              Container(
-                  width: 100,
-                  height: 100,
-                  color: Colors.amber,
-                  child: Center(
-                    child: Image.asset("assets/image/wchicken.png"),
-                  )
-                ),
-              Container(
-                  width: 100,
-                  height: 100,
-                  color: Colors.amber,
-                  child: Center(
-                    child: Image.asset("assets/image/wchicken.png"),
-                  )
-                ),
-              Container(
-                  width: 100,
-                  height: 100,
-                  color: Colors.amber,
-                  child: Center(
-                    child: Image.asset("assets/image/wchicken.png"),
-                  )
-                ),
-              Container(
-                  width: 100,
-                  height: 100,
-                  color: Colors.amber,
-                  child: Center(
-                    child: Image.asset("assets/image/wchicken.png"),
-                  )
-                ),
-              Container(
-                  width: 100,
-                  height: 100,
-                  color: Colors.amber,
-                  child: Center(
-                    child: Image.asset("assets/image/wchicken.png"),
-                  )
-                ),
+              ImageBox(image: "assets/image/wchicken.png", background: Colors.amber, ),
+              ImageBox(image: "assets/image/wchicken.png", background: Colors.black, ),
+              ImageBox(image: "assets/image/wchicken.png", background: Colors.green, ),
+              ImageBox(image: "assets/image/wchicken.png", background: Colors.blue, ),
+              ImageBox(image: "assets/image/wchicken.png", background: Colors.red, ),
+              ImageBox(image: "assets/image/wchicken.png", background: Colors.brown, ),
+              ImageBox(image: "assets/image/wchicken.png", background: Colors.amber, ),
+              ImageBox(image: "assets/image/wchicken.png", background: Colors.black, ),
+              ImageBox(image: "assets/image/wchicken.png", background: Colors.green, ),
+              ImageBox(image: "assets/image/wchicken.png", background: Colors.blue, ),
+              ImageBox(image: "assets/image/wchicken.png", background: Colors.red, ),
+              ImageBox(image: "assets/image/wchicken.png", background: Colors.brown, ),
             ],
           )),
     );
   }
 }
+
