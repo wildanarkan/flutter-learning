@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:latihan_flutter/widgets/image_box.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(latihan1());
 }
 
-class MyApp extends StatelessWidget {
-  const  MyApp({super.key});
+class latihan1 extends StatelessWidget {
+  const  latihan1({super.key});
 
   @override
   Widget build(BuildContext context) {
