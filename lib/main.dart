@@ -4,6 +4,8 @@ import 'package:latihan_flutter/widgets/image_box.dart';
 import 'package:latihan_flutter/widgets/latihan/latihan.dart';
 import 'package:latihan_flutter/widgets/latihan/latihan1.dart';
 import './widgets/latihan/latihan2.dart';
+import './widgets/latihan/latihan3.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -14,7 +16,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: latihan1()
+      home: latihan3()
     );
   }
 }

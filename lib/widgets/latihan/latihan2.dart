@@ -31,7 +31,7 @@ class latihan2 extends StatelessWidget {
                     image: DecorationImage(
                       fit: BoxFit.cover,
                       image: NetworkImage(
-                        "https://picsum.photos/id/${777 + index}/200/300",
+                        "https://picsum.photos/id/${777 + index}/200/300"
                         ))),
                     // color: Colors.grey[400],
                   
