@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import './widgets/latihan/dialog.dart';
+import './widgets/latihan/snackbar.dart';
 
 void main(){
-  runApp(AppDialog());
+  runApp(AppSnackbar());
 }
