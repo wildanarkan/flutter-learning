@@ -158,10 +158,42 @@ class ProfilePage extends StatelessWidget {
                 ],
               ),
             ),
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              TabItem(active: true, icon: Icons.grid_on_rounded),
+              TabItem(active: false, icon: Icons.person_pin_outlined),
+            ],
           )
         ],
       ),
     );
+  }
+}
+
+class TabItem extends StatelessWidget {
+  const TabItem({
+    required this.active,
+    required this.icon,
+    super.key,
+  });
+
+  final bool active;
+  final IconData icon;
+
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+        child: Container(
+            padding: EdgeInsets.all(10),
+            decoration: BoxDecoration(
+                border:
+                    Border(
+                      bottom: BorderSide(
+                        color: active == true? Colors.black : Colors.grey, 
+                        width: 2))),
+            child: Icon(icon, color: active == true? Colors.black : Colors.grey,)));
   }
 }
 
@@ -194,11 +226,11 @@ class StoryItem extends StatelessWidget {
                 height: 75,
                 width: 75,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(50),
-                  color: Colors.white,
-                  border: Border.all(width:3, color: Colors.white),
-                   image: DecorationImage(image: AssetImage("assets/image/wildankecil.png"))
-                ),
+                    borderRadius: BorderRadius.circular(50),
+                    color: Colors.white,
+                    border: Border.all(width: 3, color: Colors.white),
+                    image: DecorationImage(
+                        image: AssetImage("assets/image/wildankecil.png"))),
               ),
             ],
           ),
