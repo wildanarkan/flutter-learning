@@ -43,7 +43,7 @@ class ProfilePage extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      InfoItem(angka: "0", judul: "Postingan"),
+                      InfoItem(angka: "20", judul: "Postingan"),
                       InfoItem(angka: "11", judul: "Pengikut"),
                       InfoItem(angka: "39", judul: "Mengikuti"),
                     ],
@@ -167,7 +167,15 @@ class ProfilePage extends StatelessWidget {
               TabItem(active: true, icon: Icons.grid_on_rounded),
               TabItem(active: false, icon: Icons.person_pin_outlined),
             ],
-          )
+          ),
+          GridView.builder(
+            padding: EdgeInsets.only(top: 2),
+            shrinkWrap: true,
+            physics: NeverScrollableScrollPhysics(),
+            itemCount: 30,
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3, mainAxisSpacing: 1, crossAxisSpacing: 1), 
+            itemBuilder: (context, index) => Image.asset("assets/image/wildankecil.png", fit: BoxFit.cover,), 
+            )
         ],
       ),
     );
