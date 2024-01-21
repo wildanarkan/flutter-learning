@@ -178,6 +178,20 @@ class ProfilePage extends StatelessWidget {
             )
         ],
       ),
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: 4,
+        iconSize: 30,
+        selectedItemColor: Colors.black,
+        unselectedItemColor: Colors.grey,
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
+        items: [
+          BottomNavigationBarItem(icon: Icon(Icons.home_outlined), label: "Home"),
+          BottomNavigationBarItem(icon: Icon(Icons.search), label: "Search"),
+          BottomNavigationBarItem(icon: Icon(Icons.add_box_outlined), label: "Add"),
+          BottomNavigationBarItem(icon: Icon(Icons.play_circle_outline), label: "Video"),
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile"),
+          ]),
     );
   }
 }
