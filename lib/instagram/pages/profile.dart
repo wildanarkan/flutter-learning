@@ -37,7 +37,16 @@ class ProfilePage extends StatelessWidget {
             child: Row(
               children: [
                 ProfilePicture(),
-                
+                Expanded(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      InfoItem(angka: "0", judul: "Postingan"),
+                      InfoItem(angka: "11", judul: "Pengikut"),
+                      InfoItem(angka: "39", judul: "Mengikuti"),
+                    ],
+                  ),
+                ),
               ],
             ),
           )
