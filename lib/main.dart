@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:latihan_flutter/http/getdata.dart';
-import 'package:latihan_flutter/instagram/instagrammain.dart';
+import 'package:latihan_flutter/http/postdata.dart';
 
 void main() {
-  runApp(AppGet());
+  runApp(AppPost());
 }
