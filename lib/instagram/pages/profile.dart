@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:latihan_flutter/instagram/widgets/info_item.dart';
 import 'package:latihan_flutter/instagram/widgets/profile_picture.dart';
+import 'package:latihan_flutter/widgets/dialog.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
@@ -49,7 +50,41 @@ class ProfilePage extends StatelessWidget {
                 ),
               ],
             ),
-          )
+          ),
+          SizedBox(
+            height: 5,
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 10),
+            child: Text(
+              "Ahmad Wildan Arkan",
+              style: TextStyle(
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16),
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 10),
+            child: Text("student!"),
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 10),
+            child: Row(
+              children: [
+                Transform.rotate(
+                    angle: 90,
+                    child: Icon(
+                      Icons.link,
+                      color: Colors.blue[900],
+                    )),
+                Text(
+                  "linktr.ee/wildanarkan",
+                  style: TextStyle(color: Colors.blue[900]),
+                )
+              ],
+            ),
+          ),
         ],
       ),
     );
