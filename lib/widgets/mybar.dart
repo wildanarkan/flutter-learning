@@ -5,14 +5,23 @@ class MyBar extends StatelessWidget implements PreferredSizeWidget {
   final Color? warnaText;
   final Color? warnaBackground;
 
-  MyBar({required this.judul, this.warnaText = Colors.white, this.warnaBackground = Colors.blue});
+  MyBar(
+      {required this.judul,
+      this.warnaText = Colors.white,
+      this.warnaBackground = Colors.blue});
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      iconTheme: IconThemeData(
+        color: Colors.white,
+      ),
       backgroundColor: warnaBackground,
       centerTitle: true,
-      title: Text(judul, style: TextStyle(color: warnaText),),
+      title: Text(
+        judul,
+        style: TextStyle(color: warnaText),
+      ),
     );
   }
 

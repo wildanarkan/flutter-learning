@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:latihan_flutter/widgets/mybar.dart';
 
-void main(){
+void main() {
   runApp(AppTextField());
 }
 
@@ -27,10 +27,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: MyBar(judul: "Text Field"),
-      body: BodyPage()
-    );
+    return Scaffold(appBar: MyBar(judul: "Text Field"), body: BodyPage());
   }
 }
 
@@ -60,17 +57,17 @@ class _BodyPageState extends State<BodyPage> {
           keyboardType: TextInputType.emailAddress,
           decoration: InputDecoration(
             labelText: "Email",
-            contentPadding: EdgeInsets.symmetric(horizontal: 30,vertical: 20),
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(20) 
-            ),
+            contentPadding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+            border: OutlineInputBorder(borderRadius: BorderRadius.circular(20)),
             prefixIcon: Icon(Icons.email),
             prefixIconColor: Colors.blue,
             alignLabelWithHint: true,
             hintText: "contoh@gmail.com",
           ),
         ),
-        SizedBox(height: 20,),
+        SizedBox(
+          height: 20,
+        ),
         TextField(
           controller: passC,
           textInputAction: TextInputAction.next,
@@ -78,42 +75,42 @@ class _BodyPageState extends State<BodyPage> {
           keyboardType: TextInputType.text,
           obscureText: isHidden,
           decoration: InputDecoration(
-            labelText: "Password",
-            contentPadding: EdgeInsets.symmetric(horizontal: 30,vertical: 20),
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(20)
-            ),
-            prefixIcon: Icon(Icons.key),
-            prefixIconColor: Colors.blue,
-            suffixIcon: IconButton(
-              onPressed: (){
-                if(isHidden == true){
-                  isHidden = false;
-                }else{
-                  isHidden = true;
-                }
-                setState(() {});
-                }, 
-                icon: Icon(Icons.remove_red_eye))
-          ),
+              labelText: "Password",
+              contentPadding:
+                  EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+              border:
+                  OutlineInputBorder(borderRadius: BorderRadius.circular(20)),
+              prefixIcon: Icon(Icons.key),
+              prefixIconColor: Colors.blue,
+              suffixIcon: IconButton(
+                  onPressed: () {
+                    if (isHidden == true) {
+                      isHidden = false;
+                    } else {
+                      isHidden = true;
+                    }
+                    setState(() {});
+                  },
+                  icon: Icon(Icons.remove_red_eye))),
         ),
-        SizedBox(height: 20,),
+        SizedBox(
+          height: 20,
+        ),
         ElevatedButton(
-          onPressed: (){
+          onPressed: () {
             print("Email ${emailC.text}, Password : ${passC.text}");
-            setState(() {
-              
-            });
-          }, 
-          child: Text("LOGIN", 
-          style: TextStyle(
-            color: Colors.white),),
+            setState(() {});
+          },
+          child: Text(
+            "LOGIN",
+            style: TextStyle(color: Colors.white),
+          ),
           style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.blue,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(20)),
-            padding: EdgeInsets.symmetric(vertical: 20, horizontal: 20)
-            ),)
+              backgroundColor: Colors.blue,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20)),
+              padding: EdgeInsets.symmetric(vertical: 20, horizontal: 20)),
+        )
       ],
     );
   }

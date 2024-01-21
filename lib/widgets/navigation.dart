@@ -24,13 +24,15 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: MyBar(judul: "HOME PAGE"),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            ElevatedButton(onPressed: () {
-              Navigator.of(context).push(MaterialPageRoute(builder: (context) => PaymentPage(),));
-            }, child: Text("Next Page >>>"))
-          ]),
+        child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+          ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => PaymentPage(),
+                ));
+              },
+              child: Text("Next Page >>>"))
+        ]),
       ),
     );
   }
@@ -43,19 +45,28 @@ class PaymentPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: MyBar(judul: "Payment Page"),
-      body: Center(child: Column(
+      body: Center(
+          child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text("PAYMENT PAGE"),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              ElevatedButton(onPressed: () {
-                Navigator.of(context).pop(MaterialPageRoute(builder: (context) => HomePage(),));
-              }, child: Text("<<< Back Page")),
-              ElevatedButton(onPressed: () {
-                Navigator.of(context).push(MaterialPageRoute(builder: (context) => InfomationPage(),));
-              }, child: Text("Next Page >>>")),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.of(context).pop(MaterialPageRoute(
+                      builder: (context) => HomePage(),
+                    ));
+                  },
+                  child: Text("<<< Back Page")),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => InfomationPage(),
+                    ));
+                  },
+                  child: Text("Next Page >>>")),
             ],
           )
         ],
@@ -76,7 +87,13 @@ class InfomationPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text("Pemesanan Berhasil"),
-            ElevatedButton(onPressed: (){Navigator.of(context).pop(MaterialPageRoute(builder: (context) => InfomationPage(),));}, child: Text("Back"))
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).pop(MaterialPageRoute(
+                    builder: (context) => InfomationPage(),
+                  ));
+                },
+                child: Text("Back"))
           ],
         ),
       ),

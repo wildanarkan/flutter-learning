@@ -1,6 +1,4 @@
-import 'dart:math';
 import 'package:flutter/material.dart';
-import 'package:latihan_flutter/widgets/image_box.dart';
 
 void main() {
   runApp(latihan3());
@@ -40,12 +38,19 @@ class latihan3 extends StatelessWidget {
                             border: Border.all(width: 5, color: Colors.white),
                             image: DecorationImage(
                                 fit: BoxFit.cover,
-                                image: AssetImage("assets/image/wildankecil.png"))),
+                                image: AssetImage(
+                                    "assets/image/wildankecil.png"))),
                       ),
                     ],
                   ),
-                  Text("Ahmad Wildan Arkan", style:
-                  TextStyle(fontSize: 30, fontStyle: FontStyle.italic, fontWeight: FontWeight.bold, decoration: TextDecoration.underline),)
+                  Text(
+                    "Ahmad Wildan Arkan",
+                    style: TextStyle(
+                        fontSize: 30,
+                        fontStyle: FontStyle.italic,
+                        fontWeight: FontWeight.bold,
+                        decoration: TextDecoration.underline),
+                  )
                 ],
               ),
             )));

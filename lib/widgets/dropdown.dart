@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:latihan_flutter/widgets/mybar.dart';
 
 void main() {
   runApp(AppDropdown());
@@ -26,18 +25,9 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   late List data = [
-    {
-      "judul": "Menu ke 1",
-      "data": 1
-    },
-    {
-      "judul": "Menu ke 2",
-      "data": 2
-    },
-    {
-      "judul": "Menu ke 3",
-      "data": 3
-    },
+    {"judul": "Menu ke 1", "data": 1},
+    {"judul": "Menu ke 2", "data": 2},
+    {"judul": "Menu ke 3", "data": 3},
   ];
 
   late int dataAwal = data[0]['data'];

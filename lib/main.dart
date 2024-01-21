@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import './widgets/latihan/snackbar.dart';
+import 'package:latihan_flutter/widgets/navigation.dart';
 
-void main(){
-  runApp(AppSnackbar());
+void main() {
+  runApp(AppNavigation());
 }

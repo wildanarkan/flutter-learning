@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class ImageBox extends StatelessWidget {
@@ -7,7 +6,7 @@ class ImageBox extends StatelessWidget {
     required this.cabang,
     required this.image,
     required this.background,
-  }):super(key: key);
+  }) : super(key: key);
 
   final String cabang;
   final String image;
@@ -23,10 +22,12 @@ class ImageBox extends StatelessWidget {
               child: Text(cabang),
             ),
             Center(
-              child: Image.asset("$image",height: 150,),
+              child: Image.asset(
+                "$image",
+                height: 150,
+              ),
             )
           ],
-        )
-      );
+        ));
   }
 }

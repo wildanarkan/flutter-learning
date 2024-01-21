@@ -28,55 +28,48 @@ class _HomePageState extends State<HomePage> {
   late int index;
   List showWidget = [
     Center(
-        child: Text("HOME"),
-      ),
+      child: Text("HOME"),
+    ),
     Center(
-        child: Text("CHAT"),
-      ),
+      child: Text("CHAT"),
+    ),
     Center(
-        child: Text("CART"),
-      ),
+      child: Text("CART"),
+    ),
     Center(
-        child: Text("PROFILE"),
-      ),
+      child: Text("PROFILE"),
+    ),
   ];
   @override
   void initState() {
     index = 0;
     super.initState();
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: MyBar(judul: "BOTTOM NAVBAR"),
       body: showWidget[index],
       bottomNavigationBar: BottomNavigationBar(
-        currentIndex: index,
-        backgroundColor: Colors.brown[100],
-        selectedItemColor: Colors.black,
-        unselectedItemColor: Colors.black45,
-        type: BottomNavigationBarType.fixed,
-        onTap: (value) {
-          setState(() {
-          index = value;
-            
-          });
-        },
+          currentIndex: index,
+          backgroundColor: Colors.brown[100],
+          selectedItemColor: Colors.black,
+          unselectedItemColor: Colors.black45,
+          type: BottomNavigationBarType.fixed,
+          onTap: (value) {
+            setState(() {
+              index = value;
+            });
+          },
           items: [
+            BottomNavigationBarItem(label: "HOME", icon: Icon(Icons.home)),
+            BottomNavigationBarItem(label: "CHAT", icon: Icon(Icons.message)),
             BottomNavigationBarItem(
-              label: "HOME",
-              icon: Icon(Icons.home)),
-              BottomNavigationBarItem(
-              label: "CHAT",
-              icon: Icon(Icons.message)),
+                label: "CART", icon: Icon(Icons.shopping_cart)),
             BottomNavigationBarItem(
-              label: "CART",
-              icon: Icon(Icons.shopping_cart)),
-            BottomNavigationBarItem(
-              label: "PROFILE",
-              icon: Icon(Icons.account_circle)),
-              ]) ,
-      
+                label: "PROFILE", icon: Icon(Icons.account_circle)),
+          ]),
     );
   }
 }
