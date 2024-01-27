@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:latihan_flutter/package/dropdown_api/dropdown_api.dart';
+import 'package:latihan_flutter/package/getx/getx.dart';
 
 void main() {
-  runApp(AppDropDownApi());
+  runApp(AppGetX());
 }
