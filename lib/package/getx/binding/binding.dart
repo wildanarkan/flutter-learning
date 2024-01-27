@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:latihan_flutter/package/getx/binding/bindings/counter_bindings.dart';
 import 'package:latihan_flutter/package/getx/binding/controllers/counter_controller.dart';
 import 'package:latihan_flutter/package/getx/binding/pages/counter.dart';
 import './pages/home.dart';
@@ -19,9 +20,19 @@ class AppBinding extends StatelessWidget {
         GetPage(
           name: "/counter", 
           page: () => CounterPage(), 
-          bindings: [
-            BindingsBuilder.put(() => CounterController())
-          ]
+          binding: CounterBindings()
+          // bindings: [
+          //   // Ganti Dengan Binding Class
+          //   BindingsBuilder.put(() => CounterController()),
+          //   BindingsBuilder.put(() => CounterController()),
+          //   BindingsBuilder.put(() => CounterController()),
+          //   BindingsBuilder.put(() => CounterController()),
+          //   BindingsBuilder.put(() => CounterController()),
+          //   BindingsBuilder.put(() => CounterController()),
+          //   BindingsBuilder.put(() => CounterController()),
+          //   BindingsBuilder.put(() => CounterController()),
+          //   BindingsBuilder.put(() => CounterController()),
+          // ]
           ),
           
           ],
