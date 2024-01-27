@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:latihan_flutter/package/getx/rx_variable/rx_variable.dart';
+import 'package:latihan_flutter/package/getx/workers/workers.dart';
 
 void main() {
-  runApp(AppRxVariable());
+  runApp(AppGetXWorkers());
 }
