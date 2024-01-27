@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:latihan_flutter/package/getx/getx.dart';
+import 'package:latihan_flutter/package/getx/dialog/getx_dialog.dart';
 
 void main() {
-  runApp(AppGetX());
+  runApp(AppGetXDialog());
 }
