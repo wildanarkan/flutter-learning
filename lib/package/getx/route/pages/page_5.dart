@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:latihan_flutter/widgets/mybar.dart';
-import './home.dart';
 
 class PageLima extends StatelessWidget {
   const PageLima({super.key});
@@ -15,7 +14,7 @@ class PageLima extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text("PageLima"),
-          ElevatedButton(onPressed: () => Get.offAll(HomePage()), child: Text("BAKC TO HOME"))
+          ElevatedButton(onPressed: () => Get.offAllNamed("/home"), child: Text("BAKC TO HOME"))
         ],
       )),
     );

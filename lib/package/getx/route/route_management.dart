@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:latihan_flutter/package/getx/route/pages/page_1.dart';
 import './pages/home.dart';
 
 void main() {
@@ -14,6 +15,10 @@ class AppRouteManagement extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       home: HomePage(),
+      getPages: [
+        GetPage(name: "/page_1", page: () => PageSatu()),
+        GetPage(name: "/home", page: () => HomePage())
+        ],
     );
   }
 }
