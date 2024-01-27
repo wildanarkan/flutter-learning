@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:latihan_flutter/package/getx/dependency/getx_dependency.dart';
+import 'package:latihan_flutter/package/getx/route/route_management.dart';
 
 void main() {
-  runApp(AppGetXDependency());
+  runApp(AppRouteManagement());
 }
