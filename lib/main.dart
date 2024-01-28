@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:latihan_flutter/package/getx/binding/binding.dart';
+import 'package:get_storage/get_storage.dart';
+import 'package:latihan_flutter/package/getx/storage/getx_storage.dart';
 
-void main() {
-  runApp(AppBinding());
+void main() async{
+  await GetStorage.init();
+  runApp(AppGetXStorage());
 }
